@@ -1,0 +1,52 @@
+.container {
+  width: 28.8rem;
+
+  &__logo {
+    padding: 2.4rem;
+  }
+
+  &__routes {
+    list-style: none;
+    padding: 5.2rem 3.8rem;
+  }
+  &__routes > li {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+  }
+  &__routes > li > span {
+
+    &:first-child {
+      margin-right: 1rem;
+    }
+    &:last-child {
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+
+  }
+
+  &__routes > li:hover {
+    & > span:last-child {
+      color: var(--color_blue);
+    }
+  }
+
+  &__routes > .active {
+    background-color: #EDEEFF;
+    padding: .8rem 1.6rem;
+    border-radius: 4.8rem;
+    cursor: pointer;
+
+    & > span:last-child {
+      color: var(--color_blue);
+    }
+  }
+
+}

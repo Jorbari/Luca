@@ -1,0 +1,329 @@
+@import "src/partials/abstracts/variables";
+
+@media screen and (min-width: calc(#{$tablet} + 1px)) {
+  .container__bg {
+    display: block;
+  }
+  .container__sm {
+    display: none !important;
+  }
+}
+
+@media (max-width: $tablet) {
+  .container__sm {
+    display: block;
+    width: 100%;
+  }
+  .container__bg {
+    display: none;
+  }
+}
+
+// Small Screen styling
+.container__sm {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .container__nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    border-bottom: 1px solid #e2e2e2;
+    margin-bottom: 32px;
+    position: sticky;
+    top: 0;
+    background-color: var(--color_white);
+  }
+
+  .container__routes {
+    list-style: none;
+    display: flex;
+
+    & > li:first-child {
+      margin-right: 22px;
+    }
+  }
+  .content_data {
+    padding: 0 16px;
+    padding-bottom: 106px;
+
+    & > h4 {
+      font-size: 24px;
+      font-family: var(--inter_font);
+      color: var(--color_gray_1);
+      font-weight: normal;
+      margin-bottom: 32px;
+    }
+  }
+  .content__nav {
+    margin-bottom: 32px;
+  }
+  .content__nav > li {
+    font-family: var(--inter_font);
+    font-size: 13px;
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
+  }
+
+  .float_button {
+    position: absolute;
+    bottom: 126px;
+    right: 16px;
+    cursor: pointer;
+  }
+}
+.card__content {
+  display: flex;
+  flex-direction: column;
+  overflow-wrap: anywhere;
+}
+
+.card__sm {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 16px 0;
+
+  &--1 {
+    display: flex;
+  }
+  &__img {
+    width: 56px;
+    height: 56px;
+    margin-right: 24px;
+
+    & > img {
+      object-fit: cover;
+      height: inherit;
+      width: inherit;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    max-width: 89%;
+    overflow-wrap: break-word;
+    & > h4 {
+      color: var(--color_gray_2);
+      font-family: var(--inter_font);
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 8px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 40ch;
+    }
+    & > p {
+      font-family: var(--inter_font);
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 24px;
+      color: rgba(#828282, 0.7);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  }
+  .card__content--feedback__info {
+    font-size: 13px;
+  }
+  .card__content--feedback__option > section {
+    display: flex;
+    margin-right: 18px;
+    align-items: center;
+    & > svg {
+      margin-right: 7px;
+    }
+    & > span {
+      font-size: 14px;
+      font-weight: 600;
+      color: #9a9cb5;
+    }
+  }
+}
+
+
+
+
+// bigger screen styling
+.content {
+  height: 100%;
+  width: 70.4rem;
+  margin: 0 auto;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5.6rem;
+
+    & > h4 {
+      font-size: 2.4rem;
+      font-family: var(--inter_font);
+      color: var(--color_gray_1);
+      font-weight: normal;
+    }
+    & > button {
+      background-color: var(--color_blue);
+      border: 0.3rem solid #212b80;
+      box-shadow: 0px 2px 0px #212b80;
+      border-radius: 1rem;
+      padding: 1rem 2.4rem;
+      font-size: 1.4rem;
+      color: var(--color_white);
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+
+  &__nav {
+    list-style: none;
+    display: flex;
+  }
+  &__nav > li {
+    font-family: var(--inter_font);
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.032px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:not(:last-child) {
+      margin-right: 3.2rem;
+    }
+  }
+  &__nav > li:hover {
+    color: var(--color_blue);
+  }
+  &__nav > li.active {
+    color: var(--color_blue);
+    padding: 0 1.6rem 0.8rem 1.6rem;
+    border-bottom: 2px solid var(--color_blue);
+  }
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  padding: 2.4rem 0.8rem;
+  margin-bottom: 0.4rem;
+
+  &__img {
+    width: 5.6rem;
+    height: 5.6rem;
+    margin-right: 3.2rem;
+
+    & > img {
+      object-fit: cover;
+      height: inherit;
+      width: inherit;
+    }
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__content--header {
+    display: flex;
+    justify-content: space-between;
+
+    & > h4 {
+      color: var(--color_gray_2);
+      font-family: var(--inter_font);
+      font-weight: 600;
+      font-size: 1.6rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 45ch;
+    }
+
+    & > section {
+      display: flex;
+      align-items: center;
+      & > svg {
+        margin-right: 0.7rem;
+      }
+      & > span {
+        font-weight: 600;
+        font-size: 1.4rem;
+        color: var(--color_light_gray);
+      }
+    }
+  }
+
+  &__content--description {
+    margin: 0.8rem 0 1.8rem 0;
+    font-family: var(--inter_font);
+    font-size: 1.3rem;
+    font-weight: normal;
+    color: rgba(#828282, 0.7);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  &__content--feedback {
+    display: flex;
+  }
+
+  &__content--feedback__rate {
+    display: flex;
+    align-items: center;
+    margin-right: 3.4rem;
+
+    & > svg {
+      cursor: pointer;
+    }
+
+    & > svg:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  &__content--feedback__info {
+    font-family: var(--inter_font);
+    font-size: 1.3rem;
+    font-weight: normal;
+    color: #828282;
+    display: flex;
+    align-items: center;
+    & > span {
+      display: inline-block;
+    }
+    & > span:last-child {
+      color: var(--color_blue);
+      font-weight: 600;
+    }
+  }
+
+  &__content--feedback__option {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    & > svg {
+      cursor: pointer;
+    }
+
+    & > svg:not(:last-child) {
+      margin-right: 2.9rem;
+    }
+  }
+}
+
+
+.fill__star {
+  fill: #FFD704 !important;
+}

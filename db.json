@@ -1,0 +1,36 @@
+{
+  "questions": [
+
+    {
+      "image": "assets/img/img1.png",
+      "title": "¿Cuáles son los múltiplos del 7?",
+      "description": "La verdad no me queda muy claro cuáles son los múltiplos del 7 porque en la última clase e...",
+      "commentCounter": 72,
+      "starred": true
+    },
+
+    {
+      "image": "assets/img/img2.png",
+      "title": "¿Qué es el quíntuple de un número?",
+      "description": "La verdad no me queda muy claro cuáles son los múltiplos del 7 porque...",
+      "commentCounter": 153,
+      "starred": false
+    },
+
+    {
+      "image": "assets/img/img3.png",
+      "title": "¿Cuál es el Mínimo Común Múltiplo (mcm) entre 8 y 12?",
+      "description": "Creo que lo había entendido de otra manera. En la escuela nos dijeron que...",
+      "commentCounter": 221,
+      "starred": false
+    },
+    {
+      "image": "assets/img/img1.png",
+      "title": "¿Cuáles son los múltiplos del 7?",
+      "description": "La verdad no me queda muy claro cuáles son los múltiplos del 7 porque en la última clase e...",
+      "commentCounter": 72,
+      "starred": true
+    }
+
+  ]
+}

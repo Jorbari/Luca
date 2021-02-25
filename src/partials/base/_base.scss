@@ -1,0 +1,41 @@
+@import '../abstracts/variables';
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+// Commonly used color and font in the app
+:root {
+  --poppins_font: 'Poppins', sans-serif;
+  --inter_font: 'Inter', sans-serif;
+  --color_white: #FFFFFF;
+  --color_blue: #3843D0;
+  --color_light_gray: #9A9CB5;
+  --color_milky: #F1F2F8;
+  --color_gray_1: #333333;
+  --color_gray_2: #4F4F4F;
+}
+
+
+
+html {
+  font-size: 62.5%;
+
+  @media screen and (max-width: $md) {
+    font-size: 43%;
+  }
+
+  @media screen and (max-width: $tablet) {
+    font-size: 36%;
+  }
+
+}
+
+body {
+  box-sizing: border-box;
+  min-height: 100vh;
+  height: 100vh;
+}

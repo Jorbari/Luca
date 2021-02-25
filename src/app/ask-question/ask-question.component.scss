@@ -1,0 +1,157 @@
+@import 'src/partials/abstracts/variables';
+
+.content {
+  height: 100%;
+  width: 57.6rem;
+  margin: 0 auto;
+  @media screen and (max-width: $tablet) {
+    padding-top: 16px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5.6rem;
+
+    & > h4 {
+      font-size: 2.4rem;
+      font-family: var(--inter_font);
+      color: var(--color_gray_1);
+      font-weight: normal;
+
+      @media screen and (max-width: $tablet) {
+        font-size: 24px;
+      }
+    }
+    & > button {
+      color: var(--color_blue);
+      border: .3rem solid #212B80;
+      box-shadow: 0px 2px 0px #212B80;
+      border-radius: 1rem;
+      padding: 1rem 2.4rem;
+      font-size: 1.4rem;
+      background-color: var(--color_white);
+      font-weight: 600;
+      cursor: pointer;
+
+      &.show_sm {
+        display: none;
+      }
+      &.show_lg {
+        display: initial;
+      }
+
+      @media screen and (max-width: $tablet) {
+        &.show_lg {
+          display: none !important;
+        }
+        &.show_sm {
+          display: initial;
+          background: transparent;
+          border: none;
+          box-shadow: none;
+        }
+      }
+
+    }
+
+  }
+
+}
+
+.form__group {
+
+  &:not(:last-child) {
+    margin-bottom: 3.2rem;
+  }
+
+  & > label {
+    margin-bottom: .8rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #565656;
+    display: block;
+  }
+
+  & > .form__control {
+    background: var(--color_white);
+    border: 2px solid rgba(38, 38, 38, 0.25);
+    box-sizing: border-box;
+    border-radius: 1.2rem;
+    font-size: 1.6rem;
+    padding: 1.5rem 1.6rem;
+
+    &::placeholder {
+      color: #C0C0C0;
+      font-size: 1.6rem;
+      font-weight: normal;
+    }
+  }
+
+  & > input {
+    width: 100%;
+    height: 4.8rem;
+  }
+
+  & > textarea {
+    width: 100%;
+    height: 19.2rem;
+  }
+
+  &:nth-child(3) {
+    display: flex;
+    justify-content: flex-end;
+
+    & > button {
+      background-color: var(--color_blue);
+      border: .3rem solid #212B80;
+      box-shadow: 0px 2px 0px #212B80;
+      border-radius: 1rem;
+      padding: 1rem 2.4rem;
+      font-size: 1.4rem;
+      color: var(--color_white);
+      font-weight: 600;
+      cursor: pointer;
+    }
+    & > button:disabled {
+      background-color: var(--color_gray_2);
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    & > label {
+      font-size: 14px;
+    }
+    & > .form__control {
+      border-radius: 12px;
+      font-size: 16px;
+
+      &::placeholder {
+        font-size: 16px;
+      }
+    }
+    & > input {
+      height: 48px;
+    }
+    & > textarea {
+      height: 192px;
+    }
+    &:nth-child(3) {
+      display: flex;
+
+      & > button {
+        width: 100%;
+        height: 48px;
+        font-size: 15px;
+        border-radius: 12px;
+      }
+    }
+  }
+
+}
+
+.error__notifier {
+  font-size: 14px;
+  color: #ff0000eb;
+}

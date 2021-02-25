@@ -1,0 +1,39 @@
+<div class="content">
+
+  <section class="content__header">
+    <h4>Haz una pregunta</h4>
+    <button routerLink="/" class="show_lg">CANCELAR</button>
+    <button routerLink="/" class="show_sm">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 8L8 24M8 8L24 24" stroke="#9A9CB5" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+
+  </section>
+
+  <form [formGroup]="questionForm">
+
+    <div class="form__group">
+      <label for="title">Título de publicación</label>
+      <input type="text" class="form__control" id="title" placeholder="Escribe tu título aquí" formControlName="title">
+      <span class="error__notifier" *ngIf="title.invalid && title.dirty" >Please input a title</span>
+    </div>
+
+    <div class="form__group">
+      <label for="description">Publicación</label>
+      <!-- place holeder
+
+        Escribe tu publicación aquí
+      -->
+      <textarea name="" class="form__control" id="description" cols="30" rows="10" formControlName="description"></textarea>
+      <span class="error__notifier" *ngIf="description.invalid && description.dirty">Please input a short publication</span>
+    </div>
+
+    <div class="form__group" >
+      <button [disabled]="questionForm.invalid" type="button" (click)="addQuestion()">PUBLICAR</button>
+    </div>
+
+  </form>
+
+
+</div>

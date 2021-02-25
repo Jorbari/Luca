@@ -1,0 +1,49 @@
+@import "src/partials/abstracts/variables";
+
+.container {
+  height: 8rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 2.1rem 4.8rem;
+  gap: 2rem;
+  position: sticky;
+  top: 0;
+  background-color: var(--color_milky);
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+
+
+  &__list {
+    display: flex;
+  }
+  &__list > ul, &__list > ul > li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+  &__list > ul > li  > svg {
+    margin-right: .8rem;
+  }
+  &__list > ul > li  > span {
+
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #D9DAE3;
+  }
+
+  &__list > ul > li > .form__control {
+    border: 3px solid #C6C7D4;
+    box-shadow: 0px 2px 0px #C6C7D4;
+    border-radius: 1rem;
+    padding: 1rem 1.2rem;
+    color: #9A9CB5;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  &__list > ul > li:not(:last-child) {
+    margin-right: 3.6rem;
+  }
+
+}

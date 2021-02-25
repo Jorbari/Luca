@@ -1,0 +1,33 @@
+@import "src/partials/abstracts/variables";
+
+@media (max-width: $tablet) {
+  .container {
+    background-color: var(--color_white) !important;
+  }
+}
+
+
+.wrapper {
+  display: flex;
+  width: 100%;
+
+  & > .container {
+    height: 100vh;
+
+    &:first-child {
+      background-color: var(--color_white);
+      @media screen and (max-width: $tablet) {
+        display: none;
+      }
+    }
+    &:last-child {
+      background-color: var(--color_milky);
+      flex: 1;
+      overflow-y: scroll;
+    }
+    &:last-child > .content {
+      padding: 4rem;
+      max-height: calc(100vh - 8rem);
+    }
+  }
+}
